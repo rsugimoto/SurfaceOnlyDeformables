@@ -26,8 +26,8 @@ The program is tested on a desktop machine running Ubuntu 20.04 with CUDA and an
 
 ### Required
 
-- [Eigen]{https://eigen.tuxfamily.org/}
-- [libigl]{https://libigl.github.io/}
+- [Eigen](https://eigen.tuxfamily.org/)
+- [libigl](https://libigl.github.io/)
 
   Eigen and libigl are included as git submodules. You can fetch them when you clone this repository by
 
