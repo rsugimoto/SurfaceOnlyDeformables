@@ -1,0 +1,128 @@
+{
+    "dt": 0.003,
+    "enable_cuda": true,
+    "cuda_thread_per_block": 16,
+    "end_time_step": 500,
+    "enable_viewer": true,
+    "viewer": {
+        "save_frames": false
+    },
+    "save_mesh": false,
+    "mesh_save_folder_path": "mesh",
+    "timer_stat_save_path": "",
+    "constraints": {
+        "epsilon": 1e-5,
+        "enable_collision": true,
+        "diagonal_scaling_factor": 0.0,
+        "collision_radius": 0.02,
+        "collision_grid_interval": 0.02,
+        "global_iter": 20,
+        "normal_iter": 20,
+        "tangential_iter": 10,
+        "enable_self_collision": false,
+        "enable_glue": false
+    },
+    "gravitational_constant": [
+        0.0,
+        -9.8,
+        0.0
+    ],
+    "physics_object_groups": [
+        {
+            "physics_object_group": {
+                "mesh": {
+                    "file": "data/bunny_reordered.obj",
+                    "enable_vertex_reordering": false,
+                    "__comment__": "The vertex reordering is already pre-applied to the obj file."
+                },
+                "type": "elastodynamicsCQBEM",
+                "material": {
+                    "rho": 3000.0,
+                    "mu": 1000000.0,
+                    "nu": 0.3
+                },
+                "simulation": {
+                    "dt": 0.003,
+                    "gaussian_quadrature_order": 5,
+                    "quadrature_subdivision": 2,
+                    "multistep_method": "BDF1",
+                    "use_galerkin": false,
+                    "update_local_frame": true,
+                    "compression_ratio": 0.1,
+                    "coeffs_folder_path": "precomputed_data/bunny"
+                }
+            },
+            "physics_objects": [
+                {
+                    "translation": [
+                        -0.27519217133522034,
+                        -0.019999999552965164,
+                        0.0
+                    ],
+                    "rotation": [
+                        -1.0,
+                        8.742277657347586e-08,
+                        3.821371353845884e-15,
+                        0.0,
+                        -4.371138828673793e-08,
+                        1.0,
+                        8.742277657347586e-08,
+                        1.0,
+                        4.371138828673793e-08
+                    ],
+                    "translational_vel": [
+                        1.5,
+                        0.0,
+                        0.0
+                    ],
+                    "friction_coeff": 0.2,
+                    "friction_combine": "maximum",
+                    "use_gravity": true,
+                    "is_fixed": false
+                }
+            ]
+        },
+        {
+            "physics_object_group": {
+                "mesh": {
+                    "file": "data/floor_reordered.obj",
+                    "enable_vertex_reordering": false,
+                    "__comment__": "TThe vertex reordering is already pre-applied to the obj file."
+                },
+                "type": "rigidbody",
+                "material": {
+                    "rho": 3000.0
+                }
+            },
+            "physics_objects": [
+                {
+                    "translation": [
+                        0.0,
+                        -0.10000000149011612,
+                        0.0
+                    ],
+                    "rotation": [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ],
+                    "translational_vel": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "friction_coeff": 0.2,
+                    "friction_combine": "maximum",
+                    "use_gravity": false,
+                    "is_fixed": true
+                }
+            ]
+        }
+    ]
+}
