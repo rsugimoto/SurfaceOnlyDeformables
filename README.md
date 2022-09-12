@@ -66,15 +66,12 @@ We specify the options to the program using a json file. There are a few example
 
 ## Citation
 
-TBA
-
-<!--   @article{Sugimoto2022:BEM,
-        author = {Sugimoto, Ryusuke and Batty, Christopher and Hachisuka, Toshiya},
-        title = {Surface-Only Dynamic Deformables using a Boundary Element Method},
-        journal = {Computer Graphics Forum},
-        volume = {41},
-        number = {8},
-        pages = {xx-xx},
-        doi = {10.xxxxx/cgf.xxxxx},
-        year = {2022}
-    } -->
+    @article{Sugimoto:2022:BEM,
+      journal = {Computer Graphics Forum},
+      title = {{Surface-Only Dynamic Deformables using a Boundary Element Method}},
+      author = {Sugimoto, Ryusuke and Batty, Christopher and Hachisuka, Toshiya},
+      year = {2022},
+      publisher = {The Eurographics Association and John Wiley & Sons Ltd.},
+      ISSN = {1467-8659},
+      DOI = {10.1111/cgf.14625}
+    }
